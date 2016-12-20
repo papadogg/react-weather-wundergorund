@@ -3,10 +3,9 @@ module.exports = {
     './src/index.js'
   ],
   output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'bundle.js'
-  },
+        path: __dirname,
+        filename: './public/bundle.js'
+    },
   module: {
     loaders: [{
       exclude: /node_modules/,
@@ -19,8 +18,26 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
-  }
+//  devServer: {
+//    
+//      proxy: {
+//			
+//          "/search": {
+//				target: "https://autocomplete.wunderground.com/",
+//				changeOrigin: true,
+//				pathRewrite: {
+//					"^/search": ""
+//				}
+//				
+//			},
+//           "/api": {
+//				target: "https://api.wunderground.com/api/",
+//				changeOrigin: true,
+//				pathRewrite: {
+//					"^/api": ""
+//				}
+//				
+//			}
+//		}
+//  }
 };
